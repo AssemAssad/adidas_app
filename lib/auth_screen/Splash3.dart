@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'HomeScreen.dart';
+import '../screen_admin/HomeScreen.dart';
 
-class Splash3 extends StatefulWidget {
+class Splash3 extends StatelessWidget {
   const Splash3({Key? key}) : super(key: key);
 
-  @override
-  State<Splash3> createState() => _Splash3State();
-}
-
-class _Splash3State extends State<Splash3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,6 +122,7 @@ class _Splash3State extends State<Splash3> {
     );
   }
 }
+
 // return Scaffold(
 //   backgroundColor: const Color.fromRGBO(207,207,207,1),
 //   body: Stack(

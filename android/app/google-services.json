@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "998024258455",
+    "project_id": "adidas-app-1f7a2",
+    "storage_bucket": "adidas-app-1f7a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998024258455:android:d95e757737c4ab2beb1ad2",
+        "android_client_info": {
+          "package_name": "com.example.adidas_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998024258455-a9cmq3mqomsr11lk2vukg7hptg6lae64.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBq_3OQ3GuliCAK8HBSs_576kkqqm1lAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998024258455-a9cmq3mqomsr11lk2vukg7hptg6lae64.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

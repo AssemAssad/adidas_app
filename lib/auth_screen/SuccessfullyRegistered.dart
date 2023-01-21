@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 
 import 'Splash1.dart';
 
-class SuccessfullyRegistered extends StatefulWidget {
+class SuccessfullyRegistered extends StatelessWidget {
   const SuccessfullyRegistered({Key? key}) : super(key: key);
 
-  @override
-  State<SuccessfullyRegistered> createState() => _SuccessfullyRegisteredState();
-}
-
-class _SuccessfullyRegisteredState extends State<SuccessfullyRegistered> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

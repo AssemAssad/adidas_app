@@ -1,17 +1,12 @@
-import 'package:adidas_app/NewPassword.dart';
+import 'package:adidas_app/auth_screen/NewPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-import 'const.dart';
+import '../const.dart';
 
-class VerifyCode extends StatefulWidget {
+class VerifyCode extends StatelessWidget {
   const VerifyCode({Key? key}) : super(key: key);
 
-  @override
-  State<VerifyCode> createState() => _VerifyCodeState();
-}
-
-class _VerifyCodeState extends State<VerifyCode> {
   @override
   Widget build(BuildContext context) {
 

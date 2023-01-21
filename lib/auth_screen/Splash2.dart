@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'Splash3.dart';
 
-class Splash2 extends StatefulWidget {
+class Splash2 extends StatelessWidget {
   const Splash2({Key? key}) : super(key: key);
 
-  @override
-  State<Splash2> createState() => _Splash2State();
-}
-
-class _Splash2State extends State<Splash2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
