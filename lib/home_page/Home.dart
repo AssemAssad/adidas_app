@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'const.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -138,11 +140,12 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               CircleAvatar(
-                                backgroundImage: AssetImage('assets/images/adidas.png'),
+                                child: ImageIcon(AssetImage('assets/images/nike.png'),color: Colors.grey[700],size: 24),
+                                backgroundColor: Colors.grey[200],
                                 radius: 25,
                               ),
                               const SizedBox(height: 8,),
-                              Text('Adidas',style: TextStyle(color:Color.fromRGBO(23, 88, 150, 1),fontFamily:'NotoSerifToto',fontWeight: FontWeight.bold ),)
+                              Text('Adidas',style: TextStyle(color:Colors.grey,fontFamily:'NotoSerifToto',fontWeight: FontWeight.bold ),)
                             ],
                           ),
                         ),
@@ -159,12 +162,34 @@ class _HomeState extends State<Home> {
                     color: Colors.black54
                 ),
               ),
-
-            ],
-          ),
+              const SizedBox(height: 10,),
+              Container(
+                  padding: EdgeInsets.only(right: 15.0),
+                  width: MediaQuery.of(context).size.width - 30.0,
+                  height: MediaQuery.of(context).size.height - 50.0,
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    primary: false,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 15.0,
+                    childAspectRatio: 0.8,
+                    children: <Widget>[
+                      buildCard('adidas court ', '\$30.99', 'assets/images/blue.png',
+                          false, false, context),
+                      buildCard('adidas court', '\$50.99', 'assets/images/blue.png',
+                          true, false, context),
+                      buildCard('adidas court', '\$10.99',
+                          'assets/images/blue.png', false, true, context),
+                      buildCard('adidas court', '\$20.99', 'assets/images/blue.png',
+                          false, false, context)
+                    ],
+                  )),
 
         ],
       ),
+      ],
+    )
     );
+
   }
 }

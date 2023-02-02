@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'Splash2.dart';
+import 'Splash3.dart';
 
-class Splash1 extends StatefulWidget {
-  const Splash1({Key? key}) : super(key: key);
+class Splash2 extends StatelessWidget {
+  const Splash2({Key? key}) : super(key: key);
 
-  @override
-  State<Splash1> createState() => _Splash1State();
-}
-
-class _Splash1State extends State<Splash1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +22,7 @@ class _Splash1State extends State<Splash1> {
                   height: 600,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/shoes2.jpg'),
+                          image: AssetImage('assets/images/shoes4.jpg'),
                           fit: BoxFit.cover)),
                 )),
             Positioned(
@@ -47,7 +42,7 @@ class _Splash1State extends State<Splash1> {
                       RichText(
                         textAlign: TextAlign.center,
                         text: const TextSpan(
-                          text: "Let's ",
+                          text: "We Provide ",
                           style: TextStyle(
                             fontSize: 20,
                             fontFamily: 'NotoSerifToto',
@@ -55,7 +50,7 @@ class _Splash1State extends State<Splash1> {
                           ),
                           children: <TextSpan>[
                             TextSpan(
-                              text: 'Fulfill Your Fashion\n',
+                              text: 'High Quality \n',
                               style: TextStyle(
                                 color: Color.fromRGBO(23, 88, 150, 1),
                                 fontSize: 20,
@@ -63,7 +58,7 @@ class _Splash1State extends State<Splash1> {
                               ),
                             ),
                             TextSpan(
-                              text: 'Needs With Adidas Right Now',
+                              text: 'Products Just For You',
                               style: TextStyle(
                                 fontSize: 18,
                                 fontFamily: 'NotoSerifToto',
@@ -85,7 +80,7 @@ class _Splash1State extends State<Splash1> {
                             margin: const EdgeInsets.only(left: 5, right: 5),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              color: const Color.fromRGBO(23, 88, 150, 1),
+                              color: Colors.grey,
                             ),
                           ),
                           Container(
@@ -94,7 +89,7 @@ class _Splash1State extends State<Splash1> {
                             margin: EdgeInsets.only(left: 5, right: 5),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
-                              color: Colors.grey,
+                              color: const Color.fromRGBO(23, 88, 150, 1),
                             ),
                           ),
                           Container(
@@ -123,12 +118,8 @@ class _Splash1State extends State<Splash1> {
                             Navigator.pushReplacement(context,
                                 PageTransition(
                                     type: PageTransitionType.rightToLeft,
-                                    child: Splash2())
+                                    child: Splash3())
                             );
-                            // Navigator.of(context).push(MaterialPageRoute(
-                            //   builder: (context) => Splash2(),
-                            // )
-                            // );
                           },
                           child: Text(
                             'Next',
