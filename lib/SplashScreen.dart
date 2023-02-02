@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:adidas_app/LoginScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,11 +15,18 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) => LoginScreen()
-            )
-        )
+            ()=>
+                Navigator.pushReplacement(context,
+                    PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        child: LoginScreen())
+                )
+        //         Navigator.pushReplacement(context,
+        //     MaterialPageRoute(builder:
+        //         (context) => LoginScreen(),
+        //
+        //     )
+        // )
     );
   }
   @override

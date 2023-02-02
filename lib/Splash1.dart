@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'Splash2.dart';
 
@@ -119,9 +120,15 @@ class _Splash1State extends State<Splash1> {
                         ),
                         child: MaterialButton(
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Splash2(),
-                            ));
+                            Navigator.pushReplacement(context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    child: Splash2())
+                            );
+                            // Navigator.of(context).push(MaterialPageRoute(
+                            //   builder: (context) => Splash2(),
+                            // )
+                            // );
                           },
                           child: Text(
                             'Next',

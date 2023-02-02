@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'Splash3.dart';
 
@@ -26,7 +27,7 @@ class _Splash2State extends State<Splash2> {
                   height: 600,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/shoes2.jpg'),
+                          image: AssetImage('assets/images/shoes4.jpg'),
                           fit: BoxFit.cover)),
                 )),
             Positioned(
@@ -119,9 +120,11 @@ class _Splash2State extends State<Splash2> {
                         ),
                         child: MaterialButton(
                           onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Splash3(),
-                            ));
+                            Navigator.pushReplacement(context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    child: Splash3())
+                            );
                           },
                           child: Text(
                             'Next',

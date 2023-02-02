@@ -1,4 +1,5 @@
 
+import 'package:adidas_app/HomeScreen.dart';
 import 'package:adidas_app/SplashScreen.dart';
 import 'package:flutter/material.dart';
 

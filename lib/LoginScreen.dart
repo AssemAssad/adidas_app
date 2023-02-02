@@ -4,6 +4,7 @@ import 'package:adidas_app/ForgotPassword.dart';
 import 'package:adidas_app/RegisterScreen.dart';
 import 'package:adidas_app/Splash1.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -100,9 +101,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: MaterialButton(
                     onPressed: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) => Splash1(),));
-
+                      Navigator.pushReplacement(context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: Splash1())
+                      );
                       globalKey.currentState!.validate();
                     },
                     child: Text(
@@ -205,15 +208,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
 
   }
-  // Future img(src) async
-  // {
-  //   final pick = await ImagePicker().pickImage(source: src);
-  //   if(pick == null){
-  //     return 'null';
-  //
-  //   }else{
-  //     imgP = File(pick.path);
-  //   }
-  // }
+
 }
 
