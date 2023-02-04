@@ -43,7 +43,7 @@ class allCategorie extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.8),
           child: Consumer<FirestoreProvider>(builder: (x, provider, y) {
-          return provider.categories!.isEmpty 
+          return provider.categories.isEmpty
               ?  Center(
                   child: Container(
                     width: 50,
@@ -58,14 +58,14 @@ class allCategorie extends StatelessWidget {
                   onRefresh: _refresh,
                   child:
                    ListView.builder(
-                      itemCount: provider.categories!.length,
+                      itemCount: provider.categories.length,
                       itemBuilder: (context, index) {
                         return InkWell(
                           onTap: (){
 
                             provider.getAllProduct(provider.categories[index].id.toString());
                          //  AppRoute.navigationWidget(AddProduct(provider.categories[index].id.toString()));
-          AppRoute.navigationWidget(allProduct(provider.categories![index].id.toString()));
+          AppRoute.navigationWidget(allProduct(provider.categories[index].id.toString()));
 
                           },
                           child:

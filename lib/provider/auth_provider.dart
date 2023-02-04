@@ -2,7 +2,7 @@
 
 import 'package:adidas_app/data/auth_helper.dart';
 import 'package:adidas_app/route/router.dart';
-import 'package:adidas_app/screen_admin/HomeScreen.dart';
+import 'package:adidas_app/screen_admin/AdminHomeScreen.dart';
 import 'package:adidas_app/screen_admin/categories_screen/allcategorie.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/rendering.dart';

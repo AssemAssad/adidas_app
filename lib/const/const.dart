@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
+import '../home_page/ShoesDetail.dart';
+
 final defaultPinTheme = PinTheme(
   width: 50,
   height: 50,
@@ -20,19 +22,19 @@ final submittedPinTheme = defaultPinTheme.copyWith(
     color: Colors.grey[300],
   ),
 );
-
+// , List size,List color,String description,
 Widget buildCard(String name, String price, String imgPath, bool added,
-    bool isFavorite, context) {
+    bool isFavorite,context) {
   return Padding(
       padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
       child: InkWell(
           onTap: () {
-            // Navigator.of(context).push(
-            //     MaterialPageRoute(builder: (context) => CookieDetail(
-            //         assetPath: imgPath,
-            //         cookieprice:price,
-            //         cookiename: name
-            //     )));
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ShoesDetail(
+                    assetPath: imgPath,
+                    shoesprice:price,
+                    shoesname: name,
+                )));
           },
           child: Container(
               decoration: BoxDecoration(

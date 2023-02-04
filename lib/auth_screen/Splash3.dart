@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screen_admin/HomeScreen.dart';
+import '../screen_admin/AdminHomeScreen.dart';
 
 class Splash3 extends StatelessWidget {
   const Splash3({Key? key}) : super(key: key);
@@ -102,7 +102,7 @@ class Splash3 extends StatelessWidget {
                         child: MaterialButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => HomeScreen(),
+                              builder: (context) => AdminHomeScreen(),
                             ));
                           },
                           child: Text(

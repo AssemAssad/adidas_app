@@ -39,7 +39,7 @@ class allProduct extends StatelessWidget {
               child: RefreshIndicator(
                 onRefresh: _refresh,
                 child: ListView.builder(
-                    itemCount: provider.products!.length,
+                    itemCount: provider.products.length,
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: (){

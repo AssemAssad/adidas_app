@@ -1,6 +1,7 @@
 
 import 'package:adidas_app/auth_screen/SplashScreen.dart';
 import 'package:adidas_app/firebase_options.dart';
+import 'package:adidas_app/home_page/HomeScreen.dart';
 import 'package:adidas_app/provider/auth_provider.dart';
 import 'package:adidas_app/provider/firestore_provider.dart';
 import 'package:adidas_app/route/router.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         navigatorKey: AppRoute.navkey,
         home:Builder(
           builder: (context) {
-            return SplashScreen();
+            return HomeScreen();
           }
         ) ,
         debugShowCheckedModeBanner: false,

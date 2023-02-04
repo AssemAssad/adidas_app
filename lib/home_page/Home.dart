@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'const.dart';
+import '../const/const.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,7 +16,93 @@ class _HomeState extends State<Home> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Colors.white,
-      drawer: Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[200],
+          child: Column(
+        children: [
+          Container(
+            child: Padding(
+              padding: EdgeInsets.only(top: 50.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 20.0,),
+                  CircleAvatar(
+                    radius: 50.0,
+                    backgroundColor: Colors.grey[300],
+                    backgroundImage: AssetImage('assets/images/killua.png'),
+                  ),
+                  SizedBox(height: 5.0,),
+                  Text('Assem Asaad',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 20.0,),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.home,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Home'),
+          ),
+          ListTile(
+            onTap: () {
+            },
+            leading: Icon(Icons.book,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Course'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.newspaper,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('News'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.account_balance,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Products'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.shopping_cart,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Cart'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.perm_identity,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('My Profile'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.settings,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Setting'),
+          ),
+          ListTile(
+            onTap: () {
+
+            },
+            leading: Icon(Icons.login,color: Color.fromRGBO(23, 88, 150, 1),),
+            title: Text('Logout'),
+          ),
+        ],
+      )),
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
@@ -175,7 +261,7 @@ class _HomeState extends State<Home> {
                     childAspectRatio: 0.8,
                     children: <Widget>[
                       buildCard('adidas court ', '\$30.99', 'assets/images/blue.png',
-                          false, false, context),
+                          false, false,context),
                       buildCard('adidas court', '\$50.99', 'assets/images/blue.png',
                           true, false, context),
                       buildCard('adidas court', '\$10.99',

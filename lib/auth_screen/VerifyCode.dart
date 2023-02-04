@@ -2,7 +2,7 @@ import 'package:adidas_app/auth_screen/NewPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
-import '../const.dart';
+import '../const/const.dart';
 
 class VerifyCode extends StatelessWidget {
   const VerifyCode({Key? key}) : super(key: key);

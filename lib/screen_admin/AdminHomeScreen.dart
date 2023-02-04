@@ -3,14 +3,14 @@ import 'package:adidas_app/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class AdminHomeScreen extends StatefulWidget {
+  const AdminHomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<AdminHomeScreen> createState() => _AdminHomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _AdminHomeScreenState extends State<AdminHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
